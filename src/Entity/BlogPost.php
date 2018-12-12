@@ -5,7 +5,8 @@ namespace App\Entity;
 use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints\Collection;
+//use Symfony\Component\Validator\Constraints\Collection;
+use Doctrine\Common\Collections\Collection;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\BlogPostRepository")
