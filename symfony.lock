@@ -98,6 +98,12 @@
             "ref": "66070ea553247b0cd5275e21d0fe5399a25f40be"
         }
     },
+    "egulias/email-validator": {
+        "version": "2.1.10"
+    },
+    "fig/link-util": {
+        "version": "1.0.0"
+    },
     "fzaninotto/faker": {
         "version": "v1.8.0"
     },
@@ -115,6 +121,12 @@
             "version": "2.5",
             "ref": "509b1542f3180a1cfe248ade8b7bf5092c2d4127"
         }
+    },
+    "markbaker/complex": {
+        "version": "1.4.7"
+    },
+    "markbaker/matrix": {
+        "version": "1.1.4"
     },
     "namshi/jose": {
         "version": "7.2.3"
@@ -149,10 +161,16 @@
     "phpdocumentor/type-resolver": {
         "version": "0.4.0"
     },
+    "phpoffice/phpspreadsheet": {
+        "version": "1.6.0"
+    },
     "psr/cache": {
         "version": "1.0.1"
     },
     "psr/container": {
+        "version": "1.0.0"
+    },
+    "psr/link": {
         "version": "1.0.0"
     },
     "psr/log": {
@@ -169,6 +187,9 @@
             "version": "5.2",
             "ref": "fb7e19da7f013d0d422fa9bce16f5c510e27609b"
         }
+    },
+    "swiftmailer/swiftmailer": {
+        "version": "v6.2.1"
     },
     "symfony/asset": {
         "version": "v4.2.1"
@@ -266,8 +287,14 @@
     "symfony/polyfill-intl-icu": {
         "version": "v1.10.0"
     },
+    "symfony/polyfill-intl-idn": {
+        "version": "v1.11.0"
+    },
     "symfony/polyfill-mbstring": {
         "version": "v1.10.0"
+    },
+    "symfony/polyfill-php72": {
+        "version": "v1.11.0"
     },
     "symfony/process": {
         "version": "v4.2.1"
@@ -314,6 +341,23 @@
     "symfony/serializer-pack": {
         "version": "v1.0.1"
     },
+    "symfony/stopwatch": {
+        "version": "v4.2.8"
+    },
+    "symfony/swiftmailer-bundle": {
+        "version": "2.5",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "2.5",
+            "ref": "429afc6c6778a1fdddb52a4f708cd94ff2c9960f"
+        },
+        "files": [
+            "config/packages/dev/swiftmailer.yaml",
+            "config/packages/swiftmailer.yaml",
+            "config/packages/test/swiftmailer.yaml"
+        ]
+    },
     "symfony/translation": {
         "version": "3.3",
         "recipe": {
@@ -346,6 +390,9 @@
     },
     "symfony/var-exporter": {
         "version": "v4.2.1"
+    },
+    "symfony/web-link": {
+        "version": "v4.2.8"
     },
     "symfony/web-server-bundle": {
         "version": "3.3",
