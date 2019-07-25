@@ -10,7 +10,15 @@ use ApiPlatform\Core\Annotation\ApiResource;
  * @ORM\Entity()
  * @Vich\Uploadable()
  * @ApiResource(
- * 
+ *     collectionOperations={
+ *         "get",
+ *         "post"={
+ *             "method"="POST",
+ *             "path"="/images",
+ *             "constoller"=UploadImageAction::class,
+ *             "defaults"={"_api_receive"=false}
+ *         }
+ *     }
  * )
  */
 class Image
