@@ -18,3 +18,4 @@
 
 .vscode/
 public/images/*
+!public/images/.gitkeep
