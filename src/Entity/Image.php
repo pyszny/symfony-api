@@ -32,6 +32,7 @@ class Image
 
     /**
      * @Vich\UploadableField(mapping="images", fileNameProperty="url")
+     * @Assert\NotNull()
      */
     private $file;
 
