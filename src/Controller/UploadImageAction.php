@@ -8,6 +8,7 @@ use Symfony\Component\Form\FormFactoryInterface;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use ApiPlatform\Core\Validator\Exception\ValidationException;
+use App\Form\ImageType;
 
 class UploadImageAction
 {
@@ -31,7 +32,7 @@ class UploadImageAction
         // Create a new Image instance
         $image = new Image();
         // Validate the form
-        $form = $this->formFactory->create(null, $image);
+        $form = $this->formFactory->create(ImageType::class, $image);
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()) {

@@ -5,6 +5,8 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use ApiPlatform\Core\Annotation\ApiResource;
+use Symfony\Component\Validator\Constraints as Assert;
+use App\Controller\UploadImageAction;
 
 /**
  * @ORM\Entity()
@@ -15,7 +17,7 @@ use ApiPlatform\Core\Annotation\ApiResource;
  *         "post"={
  *             "method"="POST",
  *             "path"="/images",
- *             "constoller"=UploadImageAction::class,
+ *             "controller"=UploadImageAction::class,
  *             "defaults"={"_api_receive"=false}
  *         }
  *     }
