@@ -11,9 +11,20 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping\ManyToMany;
+use ApiPlatform\Core\Annotation\ApiFilter;
+use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\BlogPostRepository")
+ * @ApiFilter(
+ *     SearchFilter::class,
+ *     properties={
+ *         "id": "exact",
+ *         "title" : "partial",
+ *         "content": "partial",
+ *         "author": "exact"
+ *     }
+ * )
  * @ApiResource(
  *     attributes={"order"={"published": "DESC"}},
  *     itemOperations={
