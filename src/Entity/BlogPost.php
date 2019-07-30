@@ -15,6 +15,7 @@ use Doctrine\ORM\Mapping\ManyToMany;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\BlogPostRepository")
  * @ApiResource(
+ *     attributes={"order"={"published": "DESC"}},
  *     itemOperations={
  *         "get"={
  *              "normalization_context"={
