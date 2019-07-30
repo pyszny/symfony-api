@@ -7,6 +7,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use ApiPlatform\Core\Annotation\ApiResource;
 use Symfony\Component\Validator\Constraints as Assert;
 use App\Controller\UploadImageAction;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity()
@@ -40,6 +41,7 @@ class Image
 
     /**
      * @ORM\Column(nullable=true)
+     * @Groups({"get-blog-post-with-author"})
      */
     private $url;
 
@@ -60,7 +62,7 @@ class Image
 
     public function getUrl()
     {
-        return $this->url;
+        return '/images/' . $this->url;
     }
 
     public function setUrl($url): void
