@@ -4,7 +4,7 @@ namespace App\Security;
 
 use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use App\Exception\InvalidConfirmationTokenException;
 
 class UserConfirmationService
 {
@@ -27,7 +27,7 @@ class UserConfirmationService
         );
 
         if(!$user) {
-            throw new NotFoundHttpException();
+            throw new InvalidConfirmationTokenException();
         }
 
         $user->setEnabled(true);
