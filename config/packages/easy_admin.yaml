@@ -1,8 +1,13 @@
 easy_admin:
     entities:
 #        # List the entity class name you want to manage
-        - App\Entity\BlogPost
-        - App\Entity\Comment
-        - App\Entity\Image
-#        - App\Entity\Category
-        - App\Entity\User
+        BlogPost:
+            class: App\Entity\BlogPost 
+        Comment:
+            class: App\Entity\Comment
+        Image:
+            class: App\Entity\Image
+        User:
+            class: App\Entity\User
+            controller: App\Controller\UserAdminController
+
