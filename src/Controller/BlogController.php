@@ -104,7 +104,7 @@ class BlogController extends AbstractController
     /**
      * @Route("/post/{id}", name="blog_delete", methods={"DELETE"})
      */
-    public function delete(BlogPost$post)
+    public function delete(BlogPost $post)
     {
         $em = $this->getDoctrine()->getManager();
         $em->remove($post);
